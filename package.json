@@ -1,0 +1,19 @@
+{
+  "name": "dijon-client",
+  "version": "latest",
+  "description": "OpenAPI client for dijon-client",
+  "author": "OpenAPI-Generator",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bmlt-enabled/dijon-typescript-client.git"
+  },
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^4.0"
+  }
+}
