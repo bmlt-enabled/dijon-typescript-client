@@ -31,6 +31,12 @@ export interface RootServerCreate {
      * @memberof RootServerCreate
      */
     url: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof RootServerCreate
+     */
+    isEnabled: boolean;
 }
 
 /**
@@ -40,6 +46,7 @@ export function instanceOfRootServerCreate(value: object): boolean {
     let isInstance = true;
     isInstance = isInstance && "name" in value;
     isInstance = isInstance && "url" in value;
+    isInstance = isInstance && "isEnabled" in value;
 
     return isInstance;
 }
@@ -56,6 +63,7 @@ export function RootServerCreateFromJSONTyped(json: any, ignoreDiscriminator: bo
         
         'name': json['name'],
         'url': json['url'],
+        'isEnabled': json['is_enabled'],
     };
 }
 
@@ -70,6 +78,7 @@ export function RootServerCreateToJSON(value?: RootServerCreate | null): any {
         
         'name': value.name,
         'url': value.url,
+        'is_enabled': value.isEnabled,
     };
 }
 

@@ -31,6 +31,12 @@ export interface RootServerUpdate {
      * @memberof RootServerUpdate
      */
     url?: string;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof RootServerUpdate
+     */
+    isEnabled?: boolean;
 }
 
 /**
@@ -54,6 +60,7 @@ export function RootServerUpdateFromJSONTyped(json: any, ignoreDiscriminator: bo
         
         'name': !exists(json, 'name') ? undefined : json['name'],
         'url': !exists(json, 'url') ? undefined : json['url'],
+        'isEnabled': !exists(json, 'is_enabled') ? undefined : json['is_enabled'],
     };
 }
 
@@ -68,6 +75,7 @@ export function RootServerUpdateToJSON(value?: RootServerUpdate | null): any {
         
         'name': value.name,
         'url': value.url,
+        'is_enabled': value.isEnabled,
     };
 }
 
